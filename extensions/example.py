@@ -80,7 +80,7 @@ async def bak(ctx):
 
 @plugin.listener(hikari.MessageCreateEvent)
 async def event1(event):
-    if not event.content == "":
+    if event.content is not None:
         if not event.author.is_bot:
             if "modi" in event.content.lower() and (
                     "jumla" in event.content.lower() or "जुमला" in event.content.lower() or "jumle" in event.content.lower()):
